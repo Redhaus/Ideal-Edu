@@ -1,0 +1,69 @@
+[ {
+    "link" : "/",
+    "icon" : "appstore",
+    "name" : "Overview",
+    "key"  : "1"
+
+},{
+    "link" : "/primary-readings",
+    "icon" : "book",
+    "name" : "Primary Readings",
+    "key"  : "2"
+
+},{
+    "link" : "/lexis",
+    "icon" : "profile",
+    "name" : "Lexis",
+    "key"  : "3"
+
+},{
+    "link" : "/further-readings",
+    "icon" : "solution",
+    "name" : "Further Readings",
+    "key"  : "4"
+
+},{
+    "link" : "/key-questions",
+    "icon" : "question-circle",
+    "name" : "Key Questions",
+    "key"  : "5"
+
+},{
+    "link" : "/performances",
+    "icon" : "line-chart",
+    "name" : "Performances",
+    "key"  : "6"
+
+},{
+    "link" : "/extensions",
+    "icon" : "share-alt",
+    "name" : "Extensions",
+    "key"  : "7"
+
+},{
+    "link" : "/continual-goals",
+    "icon" : "check-square",
+    "name" : "Continual Goals",
+    "key"  : "8"
+
+},{
+    "link" : "/annotation",
+    "icon" : "ellipsis",
+    "name" : "Annotation",
+    "key"  : "9"
+
+},{
+    "link" : "/weekly-outline",
+    "icon" : "file-text",
+    "name" : "Weekly Outline",
+    "key"  : "10"
+
+},{
+    "link" : "/results",
+    "icon" : "copy",
+    "name" : "Results",
+    "key"  : "11"
+
+}
+
+]

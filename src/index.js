@@ -1,10 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Dashboard from './Dashboard';
 import * as serviceWorker from './serviceWorker';
+import { BrowserRouter } from "react-router-dom";
+import { Provider } from 'unstated';
+import UNSTATED from 'unstated-debug';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const rootEl = document.getElementById("root");
+UNSTATED.logStateChanges = true;
+
+let render = () => {
+  ReactDOM.render(
+    <Provider>
+      <BrowserRouter>
+          <Dashboard />
+      </BrowserRouter>,
+    </Provider >,
+    rootEl
+  );
+};
+
+// if(module.hot){
+//     module.hot.accept()
+// }
+
+render();
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

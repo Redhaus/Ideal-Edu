@@ -1,0 +1,289 @@
+@import '../../node_modules/antd/dist/antd.css';
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+.trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.trigger:hover {
+  color: #1890ff;
+}
+.ant-layout {
+  background: #F7F3EC !important;
+}
+.ant-layout-footer {
+  background: #F7F3EC !important;
+}
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  height: 70px;
+  background: #cb393e;
+}
+@media screen and (max-width: 576px) {
+  .logoContainer {
+    display: none;
+  }
+}
+.logo {
+  height: 32px;
+  width: 60px;
+  margin: 16px 90px;
+  transition: margin-left 0.4s ease;
+  transition: margin-right 0.4s ease;
+}
+.icon {
+  height: 32px;
+  width: 30px;
+  margin: 16px 25px;
+  transition: margin-left 0.3s ease;
+  transition: margin-right 0.3s ease;
+}
+.main-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  -webkit-align-content: stretch;
+  align-content: stretch;
+  position: absolute;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right {
+  flex: 1;
+}
+.content-container {
+  margin: 30px ;
+  height: 100%;
+}
+.side-bar-bg {
+  background-color: #D83A3C;
+}
+.side-menu {
+  overflow: hidden;
+  height: 100% !important;
+  background: #D83A3C;
+}
+.side-menu li {
+  color: white;
+}
+.side-menu-style {
+  background: #D83A3C;
+}
+.side-menu-style li a {
+  color: white;
+}
+.ant-menu-item-selected {
+  background-color: #cb393e !important;
+  color: white !important;
+}
+.ant-menu-item-selected a:hover {
+  color: white !important;
+}
+.ant-menu-item:hover {
+  background-color: #cb393e !important;
+}
+.ant-menu-item:hover a:hover {
+  color: white !important;
+}
+.ant-layout-sider {
+  background: #cb393e;
+  min-width: 240px !important;
+}
+.ant-layout-sider-collapsed {
+  background: #cb393e;
+  min-width: 80px !important;
+}
+@media screen and (max-width: 576px) {
+  .ant-layout-sider-collapsed {
+    width: 0px !important;
+    min-width: 0px !important;
+  }
+}
+.ant-menu-inline,
+.ant-menu-vertical,
+.ant-menu-vertical-left {
+  border-right: none !important;
+}
+::selection {
+  background: #cb393e !important;
+  color: white !important;
+}
+.ant-menu-item:after {
+  content: "";
+  border-right: 0px solid !important;
+}
+.menu-padding {
+  padding-top: 80px;
+}
+.ant-layout-header {
+  height: 70px !important;
+  line-height: 70px !important;
+}
+.avatar {
+  margin: 12px;
+}
+.floatLeft {
+  float: left;
+}
+.floatRight {
+  float: right;
+}
+.section-title {
+  font-weight: bold;
+}
+.title-container {
+  height: 70px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  background-color: #cb393e;
+  color: white;
+}
+.ant-select-selection {
+  background-color: transparent !important;
+  border: 1px solid white !important;
+  color: white !important;
+}
+.ant-select-arrow {
+  right: 9px !important;
+  color: white !important;
+}
+.ant-select-selection:active {
+  outline: 0;
+  box-shadow: 0 0 0 0px white !important;
+  border-right-width: 1px !important;
+}
+.lexis-column {
+  background-color: white;
+}
+.lexis-wrapper {
+  background-color: white;
+}
+@media screen and (max-width: 768px) {
+  .lexis-wrapper {
+    background-color: transparent;
+  }
+}
+.lexis-list {
+  border-bottom: 1px solid #d9d9d9;
+  width: 100%;
+  margin-top: 60px;
+}
+.lexis-detail-list {
+  border-bottom: 1px solid #d9d9d9;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.lexis-container {
+  height: 500px;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  -webkit-align-content: stretch;
+  align-content: stretch;
+}
+.lexis-container .selected {
+  background-color: #F7F3EC;
+}
+.lexis-container .active {
+  background-color: #F7F3EC;
+}
+.lexis-detail-container {
+  height: 500px;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  -webkit-align-content: stretch;
+  align-content: stretch;
+}
+.lexis-detail {
+  height: 500px;
+  background-color: white;
+  margin-top: 0px;
+  padding: 20px 0px 20px 20px;
+  border-bottom: 1px solid #d9d9d9;
+  border-right: 1px solid #d9d9d9;
+  border-top: 1px solid #d9d9d9;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .lexis-detail {
+    margin-top: 20px;
+    border-left: 1px solid #d9d9d9;
+  }
+}
+.detail-content {
+  padding-right: 30px;
+  padding-bottom: 20px;
+}
+.lexis-item {
+  padding: 15px !important;
+}
+.lexis-item .ant-list-item-content {
+  display: initial !important;
+  flex: 1 1;
+  justify-content: flex-end;
+}
+.ant-list-bordered {
+  border-radius: 0px !important;
+  border-left: 1px solid #d9d9d9 !important;
+  border-right: 1px solid #d9d9d9 !important;
+  border-bottom: 1px solid #d9d9d9 !important;
+  border-top: 0px solid #d9d9d9 !important;
+}
+.ant-input {
+  border: none !important;
+}
+.lexis-search {
+  position: absolute;
+  height: 60px;
+  z-index: 10000;
+  width: 100%;
+  border: 1px #d9d9d9 solid;
+}
+.ant-switch-small {
+  margin-right: 10px;
+}
+.search-spacer {
+  height: 59px;
+}
+:focus {
+  box-shadow: 0 0 0 0px !important;
+}
+input {
+  width: 100%;
+}
+.icon-container {
+  float: right;
+}
+.icon-style {
+  padding: 0px 5px 0px 5px;
+  color: #ccc;
+}
+.scrollbar-thumb {
+  width: 5px !important;
+  border-radius: 0px !important;
+}
+.scrollbar-track-y {
+  width: 5px !important;
+}

@@ -1,0 +1,527 @@
+@import '../../node_modules/antd/dist/antd.css';
+
+
+// Layout//////////////////////////////////////////
+
+@sideBarColor: #D83A3C;
+@mainBarColor: #cb393e;
+@backgroundColor: #F7F3EC;
+@lightIcons: white;
+@darkIcons: #262626;
+@grayBorder: #d9d9d9;
+
+html, body {
+  height:100%;
+  margin:0;
+}
+
+.trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color .3s;
+}
+
+.trigger:hover {
+  color: #1890ff;
+}
+
+
+.ant-layout {
+  
+  background: @backgroundColor !important;
+  
+}
+
+.ant-layout-footer {
+  background: @backgroundColor !important;
+ 
+}
+
+.ant-menu-inline .ant-menu-item:not(:last-child) {
+  // margin-bottom: 0px !important;
+}
+
+
+
+
+
+
+
+
+
+// Logo///////////////////////////////////////
+
+.logoContainer{
+  .flex();
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  height: 70px;
+  background: @mainBarColor;
+
+  @media screen {
+    @media (max-width: 576px) {
+      // width: 0px !important;
+      display: none;
+
+    }
+  }
+  
+
+
+  
+}
+
+
+.logo {
+  height: 32px;
+  width: 60px;
+  margin: 16px 90px;
+  transition: margin-left .4s ease;
+  transition: margin-right .4s ease;
+
+  
+}
+
+.icon {
+  height: 32px;
+  width: 30px;
+  margin: 16px 25px;
+  transition: margin-left .3s ease;
+  transition: margin-right .3s ease;
+
+}
+
+
+//////100% Height//////////////////////////////////
+
+
+
+.main-container {
+
+  height:100%;
+  width: 100%;
+  display:flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  -webkit-align-content: stretch;
+  align-content: stretch;
+  position: absolute;
+  // overflow: hidden;
+
+}
+
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.right {
+  flex:1;
+}
+
+.content-container {
+  // background-color:steelblue;
+  margin: 30px ;
+  height:100%;  
+
+  // min-height: 280px;
+
+}
+
+
+// .scrollable {
+//    overflow-y:auto;
+// }
+
+
+///Side Menu ////////////////////////////
+
+.side-bar-bg{
+  background-color: @sideBarColor;
+}
+
+.side-menu{
+  overflow: hidden;
+  height: 100% !important;
+  background: @sideBarColor;
+  li{
+    color: @lightIcons;
+
+  }
+}
+
+.side-menu-style{
+ 
+  background: @sideBarColor;
+  li{
+    a{
+      color: @lightIcons;
+
+    }
+
+  }
+}
+
+.ant-menu-item-selected {
+  background-color: @mainBarColor !important;
+  color: @lightIcons !important;
+  a:hover {
+    color: @lightIcons !important;
+  }
+}
+
+.ant-menu-item:hover {
+  background-color: @mainBarColor !important;
+  a:hover {
+    color: @lightIcons !important;
+  }
+}
+
+.ant-layout-sider {
+
+  background: @mainBarColor; 
+  min-width: 240px !important;
+
+}
+
+.ant-layout-sider-collapsed {
+
+  background: @mainBarColor; 
+  min-width: 80px !important;
+
+  @media screen {
+    @media (max-width: 576px) {
+      width: 0px !important;
+      min-width: 0px !important;
+
+    }
+  }
+  
+
+
+}
+
+// .ant-menu-item-selected > a, .ant-menu-item-selected > a:hover {
+
+// }
+
+.ant-menu-inline, .ant-menu-vertical, .ant-menu-vertical-left {
+  border-right: none !important;
+}
+
+
+::selection {
+  background: @mainBarColor !important; 
+  color: @lightIcons !important; 
+}
+
+.ant-menu-item:after {
+  content: "";
+  
+  border-right: 0px solid !important;
+  }
+
+
+// // Custom scroll bars for content and menu///////////////////
+
+
+// .scrollarea .scrollbar-container {
+
+//   opacity: 0 !important;
+
+// }
+
+// .scrollarea:hover .scrollbar-container {
+//   opacity: .3 !important;
+// }
+
+// .scrollarea .scrollbar-container.vertical {
+//   width: 6px !important;
+  
+// }
+
+// .scrollarea .scrollbar-container.vertical .scrollbar {
+//   width: 6px !important;
+
+// }
+
+
+// Menu styles////////////////////
+
+.menu-padding{
+  padding-top: 80px;
+}
+
+
+// Header menu title////////////////////////////////
+
+.ant-layout-header {
+
+  height: 70px !important;
+  line-height: 70px !important;
+}
+
+.avatar{
+  margin: 12px;
+}
+
+.floatLeft{
+  float: left;
+}
+
+.floatRight{
+  float: right;
+}
+
+.section-title{
+  // justify-content: center;
+  font-weight: bold;
+}
+
+.title-container{
+  height:70px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  background-color: @mainBarColor;
+  color: @lightIcons;
+}
+
+.ant-select-selection {
+  
+  background-color: transparent !important;
+  border: 1px solid @lightIcons !important;
+  color: @lightIcons !important;
+  
+}
+
+.ant-select-arrow {
+
+  right: 9px !important;
+  color: @lightIcons !important;
+}
+
+.ant-select-selection:active {
+  outline: 0;
+  box-shadow: 0 0 0 0px @lightIcons !important;
+  border-right-width: 1px !important;
+}
+
+
+
+
+
+///////LEXIS/////////////////////////
+
+
+
+
+.lexis-column{
+  background-color: white;
+
+}
+
+.lexis-wrapper{
+  background-color: white;
+
+  @media screen {
+    @media (max-width: 768px) {
+      background-color: transparent;
+
+    }
+  }
+
+}
+
+
+
+.lexis-list {
+  border-bottom: 1px solid  @grayBorder;
+  // overflow: hidden;
+  // height: 100% !important;
+  // background: @lightIcons;
+  width: 100%;
+  // padding-top: 40px;
+  // align-content: stretch;
+  // display:flex;
+  // flex-direction: row;
+  margin-top:60px;
+ 
+}
+
+.lexis-detail-list {
+  border-bottom: 1px solid  @grayBorder;
+  width: 100%;
+  margin-top:40px;
+  margin-bottom:20px;
+ 
+}
+
+.lexis-container {
+
+  height:500px;
+  // width: 100%;
+  
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  -webkit-align-content: stretch;
+  align-content: stretch;
+  // overflow: hidden;
+
+  .selected{
+    background-color: @backgroundColor;
+  
+  }
+  
+  .active{
+    background-color: @backgroundColor;
+  }
+
+}
+
+.lexis-detail-container {
+
+  height:500px;
+  // width: 100%;
+  
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  -webkit-align-content: stretch;
+  align-content: stretch;
+  // overflow: hidden;
+
+}
+
+.lexis-detail {
+  height: 500px;
+  background-color: white;
+  margin-top: 0px;
+  padding: 20px 0px 20px 20px;
+  border-bottom: 1px solid @grayBorder;
+  border-right: 1px solid @grayBorder;
+  border-top: 1px solid @grayBorder;
+  overflow: hidden;
+
+
+  @media screen {
+    @media (max-width: 768px) {
+      margin-top: 20px;
+      border-left: 1px solid @grayBorder;
+
+    }
+  }
+
+}
+
+.detail-content{
+  padding-right: 30px;
+  padding-bottom: 20px;
+}
+
+.lexis-item{
+padding: 15px !important;
+
+.ant-list-item-content {
+  display: initial !important; 
+  flex: 1 1;
+  justify-content: flex-end;
+}
+
+
+}
+
+
+// lexis list border
+.ant-list-bordered {
+  border-radius: 0px !important;
+  border-left: 1px solid @grayBorder !important;
+  border-right: 1px solid @grayBorder !important;
+  border-bottom: 1px solid @grayBorder !important;
+  border-top: 0px solid @grayBorder !important;
+
+
+}
+
+
+
+
+// lexis search
+.ant-input {
+  
+  border: none !important;
+
+
+ 
+}
+
+.lexis-search {
+  position: absolute;
+  height: 60px;
+  z-index: 10000;
+  width: 100%;
+  border: 1px @grayBorder solid;
+
+
+}
+
+.ant-switch-small {
+  margin-right: 10px;
+
+}
+
+
+.search-spacer{
+  height: 59px;
+}
+
+:focus{
+  box-shadow: 0 0 0 0px !important;
+}
+
+input{
+  width: 100%;
+
+  }
+
+  .search-container{
+    // width: 100%;
+  }
+  
+
+  .icon-container {
+    float: right
+
+   
+  }
+
+  .icon-style{
+    padding: 0px 5px 0px 5px;
+    color: #ccc;
+  }
+
+
+
+  // ScrollBar//////////////////////
+
+  .scrollbar-thumb {
+
+    width: 5px !important;
+    border-radius: 0px !important;
+}
+
+.scrollbar-track-y {
+
+  width: 5px !important;
+
+}
