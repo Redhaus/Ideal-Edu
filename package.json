@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "antd": "^3.10.5",
+    "lodash": "^4.17.11",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
     "react-less-watcher": "^1.1.4",

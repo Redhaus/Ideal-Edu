@@ -7,7 +7,8 @@ class LexisStore extends Container {
       lexisSearch: [],
       lexisSelected: [],
       lexisDetail: null,
-      lexisID: null
+      lexisID: null,
+      lexisFilter: []
     }
   
     selectedLexis = (id) => {
@@ -23,6 +24,23 @@ class LexisStore extends Container {
             lexisID: id
         })
     }
+
+    storeFilters = (filter) => {
+
+        if(filter === "clear"){
+            this.setState({lexisFilter: []});
+            return
+        }
+      
+
+        if(this.state.lexisFilter.includes(filter)){
+            this.setState({ lexisFilter: this.state.lexisFilter.filter(selected => selected !== filter) })
+        }else{
+            this.setState({ lexisFilter: [...this.state.lexisFilter , filter] })
+        }
+    }
+
+    
 
     // removeSelected = (id) => {
     //     this.setState({ lexisSelected: this.state.lexisSelected.filter(selected => selected !== id) })

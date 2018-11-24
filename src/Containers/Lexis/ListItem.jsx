@@ -31,7 +31,7 @@ function ListItem(props) {
     
       
 
-    const { word, id, lexisSelected, icons } = props;
+    const { word, id, lexisSelected, icons, key } = props;
 
        
     //set active class if rolled over  
@@ -47,6 +47,7 @@ function ListItem(props) {
 
 
       <List.Item
+        key={key}
         className={`${activeClass} ${selectedClass} lexis-item`} 
         onClick={() => itemClickHelper(id)} // item clicked Change
         onMouseEnter={() => itemRollHelper(id)} // Rollover Change
