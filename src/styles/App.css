@@ -208,6 +208,10 @@ body {
 .lexis-container .active {
   background-color: #F7F3EC;
 }
+.list-items-view {
+  border-right: 1px solid #d9d9d9;
+  border-left: 1px solid #d9d9d9;
+}
 .lexis-detail-container {
   height: 500px;
   display: -webkit-flex;
@@ -238,6 +242,7 @@ body {
 }
 .lexis-item {
   padding: 15px !important;
+  border-bottom: 1px solid #d9d9d9;
 }
 .lexis-item .ant-list-item-content {
   display: initial !important;

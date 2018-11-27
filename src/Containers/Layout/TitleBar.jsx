@@ -6,9 +6,7 @@ import { Select } from 'antd';
 
 class TitleBar extends Component {
 
-    constructor(props) {
-        super(props);
-    }
+   
 
     toggle = () => {
         this.setState({

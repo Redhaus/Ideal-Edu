@@ -4,18 +4,20 @@ import './index.css';
 import Dashboard from './Dashboard';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from "react-router-dom";
-import { Provider } from 'unstated';
-import UNSTATED from 'unstated-debug';
+import { Provider } from 'unistore/react'; //import provider for react specifically
+import { store } from './Store/Unistore'; //import store
+// import { Provider } from 'unstated';
+// import UNSTATED from 'unstated-debug';
 
 const rootEl = document.getElementById("root");
-UNSTATED.logStateChanges = true;
+// UNSTATED.logStateChanges = true;
 
 let render = () => {
   ReactDOM.render(
-    <Provider>
+    <Provider store={store}>
       <BrowserRouter>
           <Dashboard />
-      </BrowserRouter>,
+      </BrowserRouter>
     </Provider >,
     rootEl
   );

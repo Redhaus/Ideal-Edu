@@ -12,6 +12,7 @@
     "react-scripts": "2.1.1",
     "react-scrollbar": "^0.5.4",
     "react-smooth-scrollbar": "^8.0.6",
+    "unistore": "^3.1.0",
     "unstated": "^2.1.1",
     "unstated-debug": "^0.3.2"
   },

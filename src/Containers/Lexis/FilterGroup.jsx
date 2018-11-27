@@ -1,9 +1,5 @@
 import React, { Component } from "react";
-import _ from "lodash";
-import { Button, Icon, Tag } from "antd";
 import LexisFilterButton from './LexisFilterButton';
-
-
 
 
 export default class FilterGroup extends Component {
@@ -22,7 +18,7 @@ export default class FilterGroup extends Component {
     reset: false
   };
 
-    //   function called for every button to assign bool checked status
+    //  bool function called for every button to assign bool checked status
   filterSelected = (item) => {
 
     // if clear then clear all
@@ -35,14 +31,17 @@ export default class FilterGroup extends Component {
 
   }
 
+
+  // Create filter items based on state list of filters
   filterThings = () => {
-    // get list of objects key for button titles
+
+    // get list of objects key for button titles array
     const items = Object.keys(this.state);
 
     // map objects to make individual buttons
     const filters = items.map((item, key) => {
       return <LexisFilterButton 
-                filterSelected={this.filterSelected(item)} // bool for each select
+                filterSelected={this.filterSelected(item)} // bool function to determine each filter state
                 lexisFilter={this.props.lexisFilter}  // array of filters
                 storeFilters={this.props.storeFilters}  // function
                 key={key}   
@@ -58,7 +57,7 @@ export default class FilterGroup extends Component {
 
 
 
-
+  // render filterThings JSX that is returned
   render() {
     return <div>{this.filterThings()}</div>;
   }
