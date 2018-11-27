@@ -4,8 +4,7 @@ import React, { Component } from "react";
 import { Icon } from "antd";
 import ListItem from "./ListItem";
 
-// Unistore
-import { connect } from "unistore/react"; //import connect HOC function
+
 
 class ListView extends Component {
 
@@ -59,7 +58,7 @@ class ListView extends Component {
     // creates list items based on each LexisData item
     const listItems = () => {
 
-      return this.props.LexisData.map((word) => {
+      return this.props.lexisData.map((word) => {
         return (
           <ListItem
             key={word.id}
@@ -72,6 +71,9 @@ class ListView extends Component {
           />
         );
       });
+
+
+      
     };
 
     
@@ -81,7 +83,4 @@ class ListView extends Component {
 }
 
 //connect lexisdata to props
-export default connect(
-  "LexisData",
-  null
-)(ListView);
+export default ListView;

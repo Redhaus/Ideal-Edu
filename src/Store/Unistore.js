@@ -44,7 +44,7 @@ const actions = (store) => ({
         return ({ lexisID: id })
     },
 
-    storeFilters: (store, filter) => {
+    storeFilters: (store, filter, filterCallback) => {
 
         if(filter === "clear"){
             return({lexisFilter: []});
@@ -57,6 +57,8 @@ const actions = (store) => ({
         }else{
             return({ lexisFilter: [...store.lexisFilter , filter] })
         }
+
+        filterCallback();
     }
 
 

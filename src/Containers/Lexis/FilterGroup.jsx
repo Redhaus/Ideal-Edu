@@ -32,7 +32,7 @@ export default class FilterGroup extends Component {
   }
 
 
-  // Create filter items based on state list of filters
+  // Create filter item buttoms based on state list of filters
   filterThings = () => {
 
     // get list of objects key for button titles array
@@ -41,6 +41,7 @@ export default class FilterGroup extends Component {
     // map objects to make individual buttons
     const filters = items.map((item, key) => {
       return <LexisFilterButton 
+                filterCategory={this.props.filterCategory}
                 filterSelected={this.filterSelected(item)} // bool function to determine each filter state
                 lexisFilter={this.props.lexisFilter}  // array of filters
                 storeFilters={this.props.storeFilters}  // function
