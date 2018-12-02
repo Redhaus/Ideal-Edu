@@ -7,7 +7,7 @@ export default class LexisFilterButton extends Component {
   //   Function that adds filter name to array
   handleChange = checked => {
     this.props.storeFilters(this.props.title);
-    this.props.filterCategory(this.props.lexisFilter)
+    this.props.filterCategory()
 
   };
 

@@ -58,6 +58,7 @@ class ListView extends Component {
     // creates list items based on each LexisData item
     const listItems = () => {
 
+      // if(this.props.lexisData){
       return this.props.lexisData.map((word) => {
         return (
           <ListItem
@@ -74,7 +75,10 @@ class ListView extends Component {
 
 
       
-    };
+    // }else{
+    //   return <div>loading...</div>
+    // }
+    }
 
     
     // returns the function results to display all items
