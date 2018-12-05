@@ -1,7 +1,20 @@
 import React, { Component } from "react";
 import { Icon } from "antd";
+import _ from 'lodash'
 
 class LexisDetail extends Component {
+
+
+  componentDidUpdate(prevProps) {
+    console.log('update')
+
+    if(this.props.detail === prevProps.detail ) // Check if it's a new user, you can also use some unique property, like the ID  (this.props.user.id !== prevProps.user.id)
+    {
+           
+      console.log('snot same', this.props.detail)
+    }
+} 
+  
 
 
 
@@ -31,8 +44,8 @@ class LexisDetail extends Component {
 
   render() {
     const { detail } = this.props;
-    // console.log(detail);
 
+    // console.log(this.props.detail)
 
  
 
@@ -42,6 +55,15 @@ class LexisDetail extends Component {
         <h2 className="missing-content">
           {" "}
           <Icon type="arrow-left" /> Make rollover new selection
+        </h2>
+      );
+    }
+
+    if (_.isEmpty(detail)) {
+      return (
+        <h2 className="missing-content">
+          {" "}
+          <Icon type="arrow-left" /> Try a Different Search or Filter
         </h2>
       );
     }
@@ -60,6 +82,7 @@ class LexisDetail extends Component {
     // Add render for Application and questions
 
     // const numSelected = this.props.lexisSelect
+
 
     return (
       <div className="detail-content">

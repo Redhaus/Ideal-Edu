@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Switch } from "antd";
+import _ from 'lodash';
 
 let currentID = null;
 
@@ -17,12 +18,32 @@ class ListItem extends Component {
   // function that prevents all individual items from rerendering 
   // unless they meet specific criteria / improves performance dramatically
   shouldComponentUpdate(nextProps) {
+
+    // console.log(this.props.icons)
     if (currentID === this.props.id) {
       return true;
     }
+
+    if ( _.difference(this.props.lexisFilter,this.props.icons).length > 0){
+      // all A entries are into B
+      // console.log('greater')
+      return true;
+    }
+
+    // if (this.props.icons !== nextProps.icons ) {
+    //   return true;
+    // }
+
+
     if (this.state.active) {
       return true;
     }
+
+    if (this.props.lexisSelected !== nextProps.lexisSelected) {
+      return true;
+    }
+
+   
     return false;
   }
 
@@ -45,8 +66,13 @@ class ListItem extends Component {
   };
 
 
+
+
+
   render() {
 
+  console.log('roll')
+  
     // deconstruct props
     const { word, id, lexisSelected, icons } = this.props;
 

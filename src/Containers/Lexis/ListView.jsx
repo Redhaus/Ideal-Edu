@@ -15,8 +15,10 @@ class ListView extends Component {
 
   // check if filters includes item if it does highlight the icon - NEEDS WORK
   iconHighlight = (item, icon, key) => {
-    if (item) {
-      return <Icon className="icon-style active-icon" key={key} type={icon} />;
+
+
+    if (this.props.lexisFilter.includes(item)) {
+      return <Icon className="active-icon" key={key} type={icon} />;
     } else {
       return <Icon className="icon-style" key={key} type={icon} />;
     }
@@ -52,37 +54,40 @@ class ListView extends Component {
     });
   };
 
+   // creates list items based on each LexisData item
+   listItems = () => {
+
+    // if(this.props.lexisData){
+    return this.props.lexisData.map((word) => {
+      return (
+        <ListItem
+          lexisFilter={this.props.lexisFilter}
+          key={word.id}
+          id={word.id}
+          itemRollover={this.itemRollover}
+          word={word.word}
+          selectedLexis={this.props.selectedLexis} // function
+          lexisSelected={this.props.lexisSelected} // Array of selected id's
+          icons={this.icon(word.icons)}
+        />
+      );
+    });
+
+
+    
+  // }else{
+  //   return <div>loading...</div>
+  // }
+  }
+
 
   render() {
 
-    // creates list items based on each LexisData item
-    const listItems = () => {
-
-      // if(this.props.lexisData){
-      return this.props.lexisData.map((word) => {
-        return (
-          <ListItem
-            key={word.id}
-            id={word.id}
-            itemRollover={this.itemRollover}
-            word={word.word}
-            selectedLexis={this.props.selectedLexis} // function
-            lexisSelected={this.props.lexisSelected} // Array of selected id's
-            icons={this.icon(word.icons)}
-          />
-        );
-      });
-
-
-      
-    // }else{
-    //   return <div>loading...</div>
-    // }
-    }
+   
 
     
     // returns the function results to display all items
-    return <div className="list-items-view">{listItems()}</div>;
+    return <div className="list-items-view">{this.listItems()}</div>;
   }
 }
 

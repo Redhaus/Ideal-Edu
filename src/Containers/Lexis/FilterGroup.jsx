@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import LexisFilterButton from './LexisFilterButton';
 
+import { Tag } from "antd";
+
+const { CheckableTag } = Tag;
+
 
 export default class FilterGroup extends Component {
 
@@ -15,7 +19,6 @@ export default class FilterGroup extends Component {
     essential: false,
     concept: false,
     event: false,
-    reset: false
   };
 
     //  bool function called for every button to assign bool checked status
@@ -48,10 +51,26 @@ export default class FilterGroup extends Component {
                 key={key}   
                 title={item} >  
             </LexisFilterButton>;
+           
     });
 
     // return JSX var to display
-    return filters;
+    return (
+      <div>
+
+              
+              {filters}
+
+              <CheckableTag
+                // checked={this.props.filterSelected}
+                checked={false}
+                onChange={this.props.resetSelected}
+              >
+                Reset
+              </CheckableTag>
+
+      </div>
+    )
   };
 
 

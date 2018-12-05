@@ -72,18 +72,7 @@ const actions = ( store ) => ({
             return({filteredLexis: [...LexisData]});
         }
 
-        // if( store.lexisSearch ){
-
-        //     console.log("there is search")
-
-        //     const filters = store.lexisFilter;      
-        //     // filter through lex icons to compare icons arr with filter arr if no difference keep it in
-        //     const filteredLex =  store.filteredLexis.filter(
-        //     item => _.difference(filters, item.icons).length === 0
-        //     );
-
-        //     return({ filteredLexis: [...filteredLex] });
-        // }else{
+       
 
             const filters = store.lexisFilter;
         
@@ -103,19 +92,13 @@ const actions = ( store ) => ({
                 return({ filteredLexis: [...filteredLex] });
 
 
-        // }
-
-        
-
-        
-    
-       
-        // });
 
     },
 
     // this filters via search accepts lexis array, search term, and filters
     filterSearch: (store, search) => {
+
+        
 
         // if there is a search term filter lexis based on it and return
         if(store.lexisSearch){
@@ -147,14 +130,26 @@ const actions = ( store ) => ({
 
     // save detail to store
     detailUpdate: (store) => {
-        return( { lexisDetail: store.filteredLexis[0]} )
+        console.log('detail updte fitred')
+
+        return( { lexisDetail: {...store.filteredLexis[0]} } )
     },
 
     detailRollover: (store, id) => {
+        console.log('rollover updte fitred')
 
         var detail = store.filteredLexis.filter(item => item.id === id);
-        return( { lexisDetail: detail[0]} )
+        return( { lexisDetail: {...detail[0]}} )
     },
+
+    resetSelected: () => {
+        return({ 
+            lexisSelected: [...[]],
+            lexisSearch: ''
+
+        
+        } )
+    }
 
   
 
@@ -164,27 +159,4 @@ const actions = ( store ) => ({
 })
 
 export { store , actions};
-
-
-
-     // const tempLexis = filters.some(ele => item.icons.includes(ele))
-        // const filteredLexis = this.props.LexisData.filter(item => filters.some(ele => item.icons.includes(ele))  )
-  
-
-
-// storeFilters = (filter) => {
-
-//     if(filter === "clear"){
-//         this.setState({lexisFilter: []});
-//         return
-//     }
-  
-
-//     if(this.state.lexisFilter.includes(filter)){
-//         this.setState({ lexisFilter: this.state.lexisFilter.filter(selected => selected !== filter) })
-//     }else{
-//         this.setState({ lexisFilter: [...this.state.lexisFilter , filter] })
-//     }
-// }
-
 
